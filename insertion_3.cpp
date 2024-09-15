@@ -27,8 +27,12 @@ void insertValueAtTail(Node *&head, int val)
     }
     temp->next = newNode;
 }
-void insertValueAtSpacificPoint()
+void insertValueAtSpacificPoint(Node* &head,int val,int pos)
 {
+    if(pos==0)
+    {
+        
+    }
 }
 void display(Node *head)
 {
@@ -45,13 +49,13 @@ int main()
 
     Node *head = NULL;
 
-    insertValue(head, 1);
+    insertValueAtHead(head, 1);
     display(head);
 
-    insertValue(head, 2);
+    insertValueAtHead(head, 2);
     display(head);
 
-    insertValue(head, 3);
+    insertValueAtHead(head, 3);
     display(head);
 
     insertValueAtTail(head, 5);

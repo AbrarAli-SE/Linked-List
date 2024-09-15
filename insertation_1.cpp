@@ -11,7 +11,7 @@ class Node
         next= NULL;
     }
 };
-void insertValue(Node* &head,int val)
+void insertValueAtHead(Node *&head, int val)
 {
     Node* newNode = new Node(val);
     newNode->next=head;
@@ -32,12 +32,12 @@ int main()
 
     Node* head = NULL;
 
-    insertValue(head,1);
+    insertValueAtHead(head, 1);
     display(head);
 
-    insertValue(head, 2);
+    insertValueAtHead(head, 2);
     display(head);
 
-    insertValue(head, 3);
+    insertValueAtHead(head, 3);
     display(head);
 }
