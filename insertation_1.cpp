@@ -17,7 +17,15 @@ void insertValue(Node* &head,int val)
     newNode->next=head;
     head=newNode;
 }
-
+void display(Node* head )
+{
+    Node* temp = head;
+    while(temp!=NULL)
+    {
+        cout<<temp->value<<"->";
+        temp=temp->next;
+    }
+}
 int main()
 {
 
