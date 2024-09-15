@@ -22,18 +22,22 @@ void display(Node* head )
     Node* temp = head;
     while(temp!=NULL)
     {
-        cout<<temp->value<<"\n->";
+        cout<<"->"<<temp->value;
         temp=temp->next;
     }
+    cout<<endl;
 }
 int main()
 {
 
     Node* head = NULL;
-    for(int i=0;i<15;i++)
-    {
-    insertValue(head,i);
-    }
+
+    insertValue(head,1);
     display(head);
 
+    insertValue(head, 2);
+    display(head);
+
+    insertValue(head, 3);
+    display(head);
 }
