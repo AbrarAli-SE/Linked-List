@@ -34,7 +34,7 @@ void insertValueAtSpacificPoint(Node* &head,int val,int pos)
         insertValueAtHead(head,val);
         return;
     }
-    Node* newNode= new Node(1);
+    Node* newNode= new Node(val);
     Node* temp = head;
     int currentPos = 0;
     while(currentPos!=pos-1)
@@ -42,6 +42,8 @@ void insertValueAtSpacificPoint(Node* &head,int val,int pos)
         temp = temp->next;
         currentPos++;
     }
+    newNode->next=temp->next;
+    temp->next=newNode;
 }
 void display(Node *head)
 {
@@ -67,5 +69,8 @@ int main()
     display(head);
 
     insertValueAtTail(head, 5);
+    display(head);
+
+    insertValueAtSpacificPoint(head, 7, 3);
     display(head);
 }
