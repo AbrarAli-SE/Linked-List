@@ -31,6 +31,14 @@ void insertValueAtSpacificPoint(Node* &head,int val,int pos)
 {
     if(pos==0)
     {
+        insertValueAtHead(head,val);
+        return;
+    }
+    Node* newNode= new Node(1);
+    Node* Temp = head;
+    int currentPos = 0;
+    while(currentPos!=pos-1)
+    {
         
     }
 }
