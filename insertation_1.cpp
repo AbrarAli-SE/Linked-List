@@ -9,9 +9,15 @@ class Node
     {
         value=val;
         next= NULL;
-
     }
 };
+void insertValue(Node* &head,int val)
+{
+    Node* newNode = new Node(val);
+    newNode->next=head;
+    head=newNode;
+}
+
 int main()
 {
 
