@@ -8,14 +8,14 @@ class Node
     Node(int val)
     {
         value=val;
-        next=NULL;
+        next= NULL;
 
     }
 };
 int main()
 {
 
-    Node* head=new Node(0);
+    Node* head=new Node(1);
 
     cout<<head->value<<" "<<head->next;
 
