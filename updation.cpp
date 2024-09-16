@@ -86,6 +86,6 @@ int main()
     insertValueAtSpacificPoint(head, 7, 3);
     display(head);
 
-    insertValueAtSpacificPoint(head, 10, 3);
+    updateValue(head, 10, 3);
     display(head);
 }
