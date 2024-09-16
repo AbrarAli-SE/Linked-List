@@ -10,7 +10,7 @@ public:
         value = val;
         next = NULL;
     }
-    Node(){}
+    Node() {}
 };
 void insertValueAtHead(Node *&head, int val)
 {
@@ -46,17 +46,22 @@ void insertValueAtSpacificPoint(Node *&head, int val, int pos)
     newNode->next = temp->next;
     temp->next = newNode;
 }
-void updateValue(Node* &head,int val,int pos)
+void updateValue(Node *&head, int val, int pos)
 {
-    Node* temp = head;
+    Node *temp = head;
     int currentPos = 0;
-    while(currentPos!= pos)
+    while (currentPos != pos)
     {
-        temp=temp->next;
+        temp = temp->next;
         currentPos++;
     }
-    temp->value=val;
-
+    temp->value = val;
+}
+void deletationAtHead(Node *&head)
+{
+    Node *temp = head;
+    head = head->next;
+    free(temp);
 }
 void display(Node *head)
 {
@@ -88,5 +93,8 @@ int main()
     display(head);
 
     updateValue(head, 10, 3);
+    display(head);
+
+    deletationAtHead(head);
     display(head);
 }
