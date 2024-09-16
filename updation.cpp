@@ -45,6 +45,18 @@ void insertValueAtSpacificPoint(Node *&head, int val, int pos)
     newNode->next = temp->next;
     temp->next = newNode;
 }
+void updateValue(Node* &head,int val,int pos)
+{
+    Node* temp = new Node(val);
+    int currentPos = 0;
+    while(currentPos!= pos-1)
+    {
+        temp=temp->next;
+        currentPos++;
+    }
+    temp->value=val;
+
+}
 void display(Node *head)
 {
     Node *temp = head;
@@ -72,5 +84,8 @@ int main()
     display(head);
 
     insertValueAtSpacificPoint(head, 7, 3);
+    display(head);
+
+    insertValueAtSpacificPoint(head, 10, 3);
     display(head);
 }
