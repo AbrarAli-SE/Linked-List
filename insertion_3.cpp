@@ -11,7 +11,7 @@ public:
         next = NULL;
     }
 };
-void insertValueAtHead(Node *&head, int val)
+void insertValueAtHead(Node* &head, int val)
 {
     Node *newNode = new Node(val);
     newNode->next = head;
