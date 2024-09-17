@@ -90,7 +90,7 @@ void deletationAtSpacificPoint(Node *&head, int pos)
         currentPos++;
     }
     Node* temp=previous->next;
-    previous=previous->next->next;
+    previous->next=previous->next->next;
     free(temp);
 }
 void display(Node *head)
