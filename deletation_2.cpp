@@ -65,13 +65,15 @@ void deletationAtHead(Node *&head)
 }
 void deletationAtTail(Node* &head)
 {
-    Node *temp = head;
-    while (temp->next != NULL)
-    {
-        temp = temp->next;
-    }
-    
+    Node *secondLast = head;
 
+    while (secondLast->next->next != NULL)
+    {
+        secondLast=secondLast->next;
+    }
+    Node* temp = secondLast->next;
+    secondLast->next=NULL;
+    free(temp); 
 }
 void display(Node *head)
 {
@@ -106,5 +108,8 @@ int main()
     display(head);
 
     deletationAtHead(head);
+    display(head);
+
+    deletationAtTail(head);
     display(head);
 }
