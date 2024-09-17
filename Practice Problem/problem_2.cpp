@@ -37,7 +37,7 @@ void reverse(Node *&head)
     if(head==NULL)
     return;
     reverse(head->next);
-    cout<<head->value;
+    cout<<head->value<<" ";
 }
 int main()
 {
