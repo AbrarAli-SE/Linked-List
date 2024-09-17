@@ -27,8 +27,8 @@ void insert(Node* &head,int val)
 
 }
 void display(Node* &head){
-    Node* temp;
-    while(temp->next!= NULL)
+    Node* temp=head;
+    while(temp!= NULL)
     {
         cout<<temp->value<<" ";
         temp=temp->next;
