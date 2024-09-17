@@ -83,6 +83,7 @@ void deletationAtSpacificPoint(Node *&head, int pos)
         return;
     }
     Node *previous=head;
+    
     int currentPos = 0;
     while(currentPos!=pos-1)
     {
