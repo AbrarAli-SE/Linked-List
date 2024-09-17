@@ -131,6 +131,7 @@ int main()
 
     deletationAtTail(head);
     display(head);
+    
 
     deletationAtSpacificPoint(head,1);
     display(head);
