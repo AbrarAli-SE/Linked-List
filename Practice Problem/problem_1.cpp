@@ -37,7 +37,7 @@ void display(Node* &head){
 }
 int main()
 {
-    Node* head;
+    Node* head =NULL;
     insert(head,15);
     display(head);
 }
