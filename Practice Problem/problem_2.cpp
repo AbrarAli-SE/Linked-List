@@ -50,6 +50,9 @@ int main()
         cin >> val;
         insert(head, val);
     }
-    cout << "\nInputs are : ";
+    cout << "\nOrignal List : ";
     display(head);
+
+    cout << "\nReverse List : ";
+    reverse(head);
 }
