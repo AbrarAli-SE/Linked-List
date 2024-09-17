@@ -30,6 +30,7 @@ void display(Node *&head)
         cout << temp->value << " ";
         temp = temp->next;
     }
+    free(temp);
     cout << endl;
 }
 void reverse(Node *&head)
