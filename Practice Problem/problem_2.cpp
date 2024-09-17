@@ -39,3 +39,17 @@ void reverse(Node *&head)
     reverse(head->next);
     cout<<head->value;
 }
+int main()
+{
+    Node *head = NULL;
+    int n = 6;
+    for (int i = 0; i < n; i++)
+    {
+        cout << "Enter Value " << i + 1 << " : ";
+        int val;
+        cin >> val;
+        insert(head, val);
+    }
+    cout << "\nInputs are : ";
+    display(head);
+}
