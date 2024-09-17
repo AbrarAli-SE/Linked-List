@@ -30,6 +30,7 @@ void insertAtEnd(Node *&head,int val)
     Node *newNode = new Node(val);
     temp->next=newNode;
     newNode->next=NULL;
+    free(temp);
 }
 void display(Node *&head)
 {
@@ -39,6 +40,8 @@ void display(Node *&head)
         cout<<temp->value<<" ";
         temp=temp->next;
     }
+    free(temp);
+
     cout<<endl;
 }
 int main()
