@@ -31,6 +31,7 @@ void display(Node *&head)
         cout << temp->value << " ";
         temp = temp->next;
     }
+    free(temp);
     cout << endl;
 }
 int countNode(Node *&head)
@@ -42,6 +43,7 @@ int countNode(Node *&head)
         temp=temp->next;
         count++;
     }
+    free(temp);
     return count;
 }
 int main()
