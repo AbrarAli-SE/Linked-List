@@ -38,6 +38,15 @@ void display(Node* &head){
 int main()
 {
     Node* head =NULL;
-    insert(head,15);
+    int n=6;
+    for(int i=0;i<n;i++)
+    {
+        cout<<"Enter Value "<<i+1<<" : ";
+        int val;
+        cin>>val;
+        insert(head,val);
+    }
+    cout<<"\nInputs are : ";
     display(head);
+
 }
