@@ -41,3 +41,24 @@ void display(Node *&head)
     }
     cout<<endl;
 }
+int main()
+{
+    Node *head = NULL;
+    int n = 7;
+    int arr[7]={1,3,5,7,9,11,13};//for automatic inputs
+    for (int i = 0; i < n; i++)
+    {
+        // cout << "Enter Value " << i + 1 << " : ";
+        // int val;
+        // cin >> val;
+        insert(head, arr[i]);
+    }
+    cout << "\nGiven List : ";
+    display(head);
+    cout << "Enter a Value to insert at end : ";
+    int val;
+    cin >> val;
+    insertAtEnd(head,val);
+    cout << "\nUpdate List: ";
+    display(head);
+}
