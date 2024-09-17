@@ -29,7 +29,6 @@ void insertAtEnd(Node *&head,int val)
     }
     Node *newNode = new Node(val);
     temp->next=newNode;
-    // free(temp);
 }
 void display(Node *&head)
 {
