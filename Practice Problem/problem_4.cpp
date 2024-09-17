@@ -22,15 +22,14 @@ void insert(Node *&head,int val)
 }
 void insertAtEnd(Node *&head,int val)
 {
-    Node *temp=head;
+    Node *temp = head;
     while(temp->next!=NULL)
     {
         temp=temp->next;
     }
     Node *newNode = new Node(val);
     temp->next=newNode;
-    newNode->next=NULL;
-    free(temp);
+    // free(temp);
 }
 void display(Node *&head)
 {
@@ -41,7 +40,6 @@ void display(Node *&head)
         temp=temp->next;
     }
     free(temp);
-
     cout<<endl;
 }
 int main()
