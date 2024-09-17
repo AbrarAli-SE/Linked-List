@@ -23,7 +23,7 @@ void insert(Node *&head,int val)
 void insertAtEnd(Node *&head,int val)
 {
     Node *temp=head;
-    while(temp!=NULL)
+    while(temp->next!=NULL)
     {
         temp=temp->next;
     }
