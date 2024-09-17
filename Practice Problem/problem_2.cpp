@@ -16,6 +16,12 @@ public:
         next = NULL;
     }
 };
+void insert(Node *&head,int val)
+{
+    Node *newNode = new Node(val);
+    newNode->next=head;
+    head=newNode;
+}
 void display(Node *&head)
 {
     Node *temp = head;
@@ -25,4 +31,11 @@ void display(Node *&head)
         temp = temp->next;
     }
     cout << endl;
+}
+void reverse(Node *&head)
+{
+    if(head==NULL)
+    return;
+    reverse(head->next);
+    cout<<head->value;
 }
