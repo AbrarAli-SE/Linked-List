@@ -75,6 +75,24 @@ void deletationAtTail(Node *&head)
     secondLast->next = NULL;
     free(temp);
 }
+void deletationAtSpacificPoint(Node *&head, int pos)
+{
+    if (pos == 0)
+    {
+        deletationAtHead(head);
+        return;
+    }
+    Node *previous=head;
+    int currentPos = 0;
+    while(currentPos!=pos-1)
+    {
+        previous=previous->next;
+        currentPos++;
+    }
+    Node* temp=previous->next;
+    previous=previous->next->next;
+    free(temp);
+}
 void display(Node *head)
 {
     Node *temp = head;
@@ -111,5 +129,8 @@ int main()
     display(head);
 
     deletationAtTail(head);
+    display(head);
+
+    deletationAtSpacificPoint(head,2);
     display(head);
 }
