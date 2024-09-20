@@ -40,7 +40,7 @@ void display(Node *head)
         position++;
     }
 
-    cout << endl<<position<<endl;
+    cout << endl;
 }
 int main()
 {
