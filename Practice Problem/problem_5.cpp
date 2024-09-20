@@ -64,7 +64,7 @@ void middleIndexAndValue(Node *&head)
 {
     if (isEmpty(head))
     {
-        float size = sizeOfList(head);
+        int size = sizeOfList(head);
         size /= 2;
         size++;
         Node *temp = head;
@@ -95,3 +95,4 @@ int main()
 
     middleIndexAndValue(head);
 }
+//done
