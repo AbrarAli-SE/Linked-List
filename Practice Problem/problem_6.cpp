@@ -49,14 +49,13 @@ int middleIndex(Node *&head)
 {
     Node *temp = head;
     int size = 0;
-    while (temp != NULL)
+    while (temp->next!= NULL)
     {
         size++;
         temp = temp->next;
     }
     size /= 2;
-    size++;
-    return size;
+    return size+1;
 }
 void display(Node *head)
 {
