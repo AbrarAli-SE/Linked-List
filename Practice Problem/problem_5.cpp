@@ -49,4 +49,40 @@ void insertValueAtStart(Node *&head, int Value)
     newNode->next = head;
     head = newNode;
 }
-void middleIndexAndValue
+int sizeOfList(Node *&head)
+{
+    Node *temp = head;
+    int size=0;
+    while(temp!=NULL)
+    {
+        size++;
+        temp=temp->next;
+    }
+    return size;
+}
+void middleIndexAndValue(Node *&head)
+{
+    if (isEmpty(head))
+    {
+        float size = sizeOfList(head);
+        size /=2;
+        size++;
+        Node* temp=head;
+        int currentIndex=1;
+        while(size!=currentIndex)
+        {
+            currentIndex++;
+            temp=temp->next;
+        }
+        cout<<"\nValue : "<<temp->value;
+        
+    }
+    else
+        cout << "\nEmpty List";
+}
+int main()
+{
+    Node* head;
+    middleIndexAndValue(head);
+    displayList(head);
+}
