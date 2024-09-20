@@ -33,7 +33,7 @@ void display(Node *head)
 {
     Node *temp = head;
     int position=1;
-    while (temp != NULL)
+    while (temp->next!= NULL)
     {
         cout << "\nPosition : "<<position<<"\nValue : " << temp->value<<endl;
         temp = temp->next;
