@@ -81,7 +81,7 @@ void middleIndexAndValue(Node *&head)
 }
 int main()
 {
-    Node *head;
+    Node *head = NULL;
     middleIndexAndValue(head);
     displayList(head);
 
@@ -89,6 +89,7 @@ int main()
     insertValueAtStart(head, 3);
     insertValueAtStart(head, 5);
     insertValueAtStart(head, 7);
+    displayList(head);
 
     cout<<sizeOfList(head)<<endl;
 
