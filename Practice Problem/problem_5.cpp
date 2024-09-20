@@ -74,24 +74,24 @@ void middleIndexAndValue(Node *&head)
             currentIndex++;
             temp = temp->next;
         }
-        cout << "\nValue : " << temp->value;
+        cout << "Middle Index: "<<size<<"\tValue : " << temp->value;
     }
     else
         cout << "\nEmpty List";
 }
 int main()
 {
+    int size,value;
     Node *head = NULL;
-    middleIndexAndValue(head);
-    displayList(head);
-
-    insertValueAtStart(head, 1);
-    insertValueAtStart(head, 3);
-    insertValueAtStart(head, 5);
-    insertValueAtStart(head, 7);
-    displayList(head);
-
-    cout<<sizeOfList(head)<<endl;
+    cout<<"How much value that you want to store in list : ";
+    cin>>size;
+    for(int i=1;i<=size;i++)
+    {
+        cout<<"Enter value "<<i<<": ";
+        cin>>value;
+       
+    insertValueAtStart(head, value);
+    }
 
     middleIndexAndValue(head);
 }
