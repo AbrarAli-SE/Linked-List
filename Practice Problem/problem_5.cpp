@@ -52,11 +52,11 @@ void insertValueAtStart(Node *&head, int Value)
 int sizeOfList(Node *&head)
 {
     Node *temp = head;
-    int size=0;
-    while(temp!=NULL)
+    int size = 0;
+    while (temp != NULL)
     {
         size++;
-        temp=temp->next;
+        temp = temp->next;
     }
     return size;
 }
@@ -65,24 +65,32 @@ void middleIndexAndValue(Node *&head)
     if (isEmpty(head))
     {
         float size = sizeOfList(head);
-        size /=2;
+        size /= 2;
         size++;
-        Node* temp=head;
-        int currentIndex=1;
-        while(size!=currentIndex)
+        Node *temp = head;
+        int currentIndex = 1;
+        while (size != currentIndex)
         {
             currentIndex++;
-            temp=temp->next;
+            temp = temp->next;
         }
-        cout<<"\nValue : "<<temp->value;
-        
+        cout << "\nValue : " << temp->value;
     }
     else
         cout << "\nEmpty List";
 }
 int main()
 {
-    Node* head;
+    Node *head;
     middleIndexAndValue(head);
     displayList(head);
+
+    insertValueAtStart(head, 1);
+    insertValueAtStart(head, 3);
+    insertValueAtStart(head, 5);
+    insertValueAtStart(head, 7);
+
+    cout<<sizeOfList(head)<<endl;
+
+    middleIndexAndValue(head);
 }
