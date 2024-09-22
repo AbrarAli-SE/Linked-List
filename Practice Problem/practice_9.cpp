@@ -31,10 +31,11 @@ void display(Node *&head)
 void sortList(Node *&head)
 {
     Node *currentNode = head;
-    Node *nextNode = head->next;
+    Node *nextNode;
     // int shortedIndex=0;
     while (currentNode != NULL)
     {
+        nextNode=currentNode->next;
         while (nextNode != NULL)
         {
             if (currentNode->value > nextNode->value)
