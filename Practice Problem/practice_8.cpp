@@ -44,16 +44,21 @@ void compareList(Node *&head1, Node *&head2)
     bool equal = false;
     if (sizeOfList(head1) == sizeOfList(head2))
     {
-        equal=true;
         Node *temp1 = head1;
         Node *temp2 = head2;
-        while(temp1!=NULL)
+        while (temp1 != NULL)
         {
-            if(temp1->value!=temp2->value)
+            if (temp1->value == temp2->value)
+            {
+                equal = true;
+            }
+            else
             {
                 equal=false;
                 break;
             }
+            temp1=temp1->next;
+            temp2=temp2->next;
         }
     }
     if (equal)
@@ -61,7 +66,8 @@ void compareList(Node *&head1, Node *&head2)
         cout << "\nBoth lists Are equal";
         return;
     }
-    cout << "\nlists Are unequal";
+    else
+        cout << "\nlists Are unequal";
 }
 int main()
 {
@@ -75,6 +81,9 @@ int main()
     insertValueAtHead(head2, 1);
     insertValueAtHead(head2, 2);
     insertValueAtHead(head2, 3);
+    
+    display(head1);
+    display(head2);
 
-    compareList(head1,head2);
+    compareList(head1, head2);
 }
