@@ -31,24 +31,26 @@ void display(Node *&head)
 }
 void sortList(Node *&head)
 {
-    Node *currentNode = NULL;
+    Node *currentNode;
     Node *lastSorthedNode=NULL;
-    bool sort=false;
+    bool swap;
     do 
     {
-        nextNode = currentNode->next;
-        while (nextNode != NULL)
+        swap=false;
+        currentNode=head;
+        while (currentNode->next!=lastSorthedNode)
         {
-            if (currentNode->value > nextNode->value)
+            if (currentNode->value > currentNode->next->value)
             {
                 int temp = currentNode->value;
-                currentNode->value = nextNode->value;
-                nextNode->value = temp;
+                currentNode->value = currentNode->next->value;
+                currentNode->next->value = temp;
+                swap=true;
             }
-            nextNode = nextNode->next;
+            currentNode = currentNode->next;
         }
-        currentNode = currentNode->next;
-    }while(currentNode != NULL)
+        lastSorthedNode=currentNode;
+    }while(swap);
 }
 int main()
 {
