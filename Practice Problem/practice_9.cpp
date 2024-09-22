@@ -28,9 +28,24 @@ void display(Node *head)
     }
     cout << endl;
 }
-void sortList()
+void sortList(Node *head)
 {
-    
+    Node *currentNode = head;
+    Node *previousNode = head;
+    int shortedIndex=0;
+    while (currentNode != NULL)
+    {
+        while (currentNode != NULL)
+        {
+            if (currentNode->value > currentNode->next->value)
+            {
+                Node* temp=currentNode;
+                currentNode=currentNode->next;
+                currentNode->next=temp;
+            }
+            currentNode=currentNode->next;
+        }
+    }
 }
 int main()
 {
