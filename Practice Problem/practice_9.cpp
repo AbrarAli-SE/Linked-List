@@ -1,4 +1,4 @@
-//swaping and sorting 
+// swaping and sorting
 #include <iostream>
 using namespace std;
 class Node
@@ -18,7 +18,7 @@ void insertValueAtHead(Node *&head, int val)
     newNode->next = head;
     head = newNode;
 }
-void display(Node *head)
+void display(Node *&head)
 {
     Node *temp = head;
     while (temp != NULL)
@@ -28,23 +28,24 @@ void display(Node *head)
     }
     cout << endl;
 }
-void sortList(Node *head)
+void sortList(Node *&head)
 {
     Node *currentNode = head;
-    Node *previousNode = head;
-    int shortedIndex=0;
+    Node *nextNode = head->next;
+    // int shortedIndex=0;
     while (currentNode != NULL)
     {
-        while (currentNode != NULL)
+        while (nextNode != NULL)
         {
-            if (currentNode->value > currentNode->next->value)
+            if (currentNode->value > nextNode->value)
             {
-                Node* temp=currentNode;
-                currentNode=currentNode->next;
-                currentNode->next=temp;
+                int temp = currentNode->value;
+                currentNode->value = nextNode->value;
+                nextNode->value = temp;
             }
-            currentNode=currentNode->next;
+            nextNode = nextNode->next;
         }
+        currentNode = currentNode->next;
     }
 }
 int main()
@@ -60,5 +61,11 @@ int main()
 
         insertValueAtHead(head, value);
     }
+    cout << "\nOrignal List:\n";
+    display(head);
 
+    sortList(head);
+
+    cout << "\nUpdate List:\n";
+    display(head);
 }
