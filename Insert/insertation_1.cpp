@@ -22,7 +22,7 @@ void display(Node* head )
     Node* temp = head;
     while(temp!=NULL)
     {
-        cout<<"->"<<temp->value;
+        cout<<temp->value<<" ";
         temp=temp->next;
     }
     cout<<endl;
