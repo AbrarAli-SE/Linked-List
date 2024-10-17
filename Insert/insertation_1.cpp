@@ -25,19 +25,16 @@ void display(Node* head )
         cout<<temp->value<<" ";
         temp=temp->next;
     }
-    cout<<endl;
+    cout<<"NULL"<<endl;
 }
 int main()
 {
 
     Node* head = NULL;
 
-    insertValueAtHead(head, 1);
-    display(head);
+    insertValueAtHead(head, 10);
+    insertValueAtHead(head, 20);
+    insertValueAtHead(head, 30);
 
-    insertValueAtHead(head, 2);
-    display(head);
-
-    insertValueAtHead(head, 3);
     display(head);
 }

@@ -32,7 +32,6 @@ void sortList(Node *&head)
 {
     Node *currentNode = head;
     Node *nextNode;
-    // int shortedIndex=0;
     while (currentNode != NULL)
     {
         nextNode=currentNode->next;
