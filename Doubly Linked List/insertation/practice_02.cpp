@@ -36,6 +36,21 @@ public:
         head->prev = newNode;
         head = newNode;
     }
+    void insertNodeAtTail(int val)
+    {
+        if (head==NULL)
+        {
+            insertNodeAtHead(val);
+        }
+
+        Node* current = head;
+        while(current)
+
+
+
+
+    }
+
     void display()
     {
         Node *temp = head;
@@ -54,7 +69,6 @@ int main()
     dll.insertNodeAtHead(10);
     dll.insertNodeAtHead(20);
     dll.insertNodeAtHead(30);
-    dll.insertNodeAtHead(50);
-    dll.insertNodeAtHead(70);
+    
     dll.display();
 }
