@@ -44,11 +44,14 @@ public:
         }
 
         Node* current = head;
-        while(current)
-
-
-
-
+        while(current->next!=NULL)
+        {
+            current=current->next;
+        }
+        Node *newNode = new Node(val);
+        current->next=newNode;
+        tail=newNode;
+        newNode->prev=current;
     }
 
     void display()
@@ -62,6 +65,17 @@ public:
         }
         cout << endl;
     }
+    void displayReverse()
+    {
+        Node *temp = tail;
+        while (temp != NULL)
+        {
+
+            cout << temp->value << " ";
+            temp = temp->prev;
+        }
+        cout << endl;
+    }
 };
 int main()
 {
@@ -69,6 +83,10 @@ int main()
     dll.insertNodeAtHead(10);
     dll.insertNodeAtHead(20);
     dll.insertNodeAtHead(30);
-    
+    dll.insertNodeAtTail(40);
+    dll.insertNodeAtTail(50);
+    dll.insertNodeAtTail(60);
+
     dll.display();
+    dll.displayReverse();
 }
