@@ -83,6 +83,7 @@ int main()
     dll.insertNodeAtHead(10);
     dll.insertNodeAtHead(20);
     dll.insertNodeAtHead(30);
+    
     dll.insertNodeAtTail(40);
     dll.insertNodeAtTail(50);
     dll.insertNodeAtTail(60);
