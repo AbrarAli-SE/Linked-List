@@ -43,7 +43,6 @@ public:
     {
         tail=tail->prev;
         tail->next=NULL;
- 
     }
     void deleteAtStart()
     {
@@ -83,11 +82,7 @@ int main()
     dll.insertNodeAtHead(30);
     dll.insertNodeAtHead(40);
     dll.insertNodeAtHead(50);
-    // cout<<dll.tail->value;
-    // dll.display();
-
-    // dll.deleteAtStart();
-    // dll.display();
+    
 
     dll.deleteAtTail();
 
