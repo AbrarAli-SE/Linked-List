@@ -31,6 +31,26 @@ void inserAtHead(Node *&head, int val)
     newNode->next = head;
     head = newNode;
 }
+void deleteAtHead(Node *&head)
+{
+    Node* tail = head;
+    while(tail->next!=head)
+    {
+        tail=tail->next;
+    }
+    head=head->next;
+    tail->next= head;
+    return;
+}
+void deleteAtTail(Node *&head)
+{
+    Node *previous=head;
+    while(previous->next->next!=head)
+    {
+        previous=previous->next;
+    }
+    previous->next=head;
+}
 void display(Node *&head)
 {
     Node *temp = head;
@@ -41,6 +61,7 @@ void display(Node *&head)
     } while (temp != head);
     cout << endl;
 }
+
 int main()
 {
     Node *head = NULL;
@@ -49,7 +70,12 @@ int main()
     inserAtHead(head, 20);
     inserAtHead(head, 30);
     inserAtHead(head, 40);
+    display(head);
 
+    deleteAtHead(head);
+    display(head);
+
+    deleteAtTail(head);
     display(head);
     return 0;
 }
